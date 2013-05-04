@@ -1,0 +1,28 @@
+//description:   проверяет все символы, 
+              // прочитанные из стандартного входного потока stdin, 
+              // и выдает сообщение о каждом пробельном символе
+#include <iostream>
+#include <stdio.h>
+#include <locale>
+using namespace std;
+
+#include <ctype.h> // isspace
+
+////// Basic function //////
+int main ()
+{
+    setlocale(LC_ALL,".1251"); //local
+    
+    char ch;
+    
+    for(;;) {
+    ch = getchar();
+    if(isspace(ch)) printf("%c является пробельным символом\n", ch);
+    if(ch == '.') break;
+    }
+    
+    
+    system ("pause");
+    return 0;    
+ }
+     
